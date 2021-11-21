@@ -1,0 +1,114 @@
+.navbar-transparent{
+    background:  transparent;
+}
+
+.nav-link{
+    color: #05386B;
+    margin-left: 1rem;
+}
+
+.nav-link1{
+    color: #D9B310;
+    margin-left: 1rem;
+}
+.nav-link2{
+    color: white;
+    margin-left: 1rem;
+}
+
+.nav-link:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.nav-link1:hover{
+    color: #328CC1;
+    cursor: pointer;
+}
+
+.nav-link2:hover{
+    color: gray;
+    cursor: pointer;
+}
+
+.nav-btn{
+    background-color: #05386B;
+    color: #5CDB95;
+}
+
+.nav-btn1{
+    background-color: #05386B;
+    color: #D9B310;
+}
+
+.nav-btn2{
+    background-color: gray;
+    color: white;
+}
+
+.nav-search{
+    outline-color: #05386B;
+    background-color: #8EE4AF;
+    margin-left: 14rem;
+    width: 18rem;
+}
+
+.nav-search1{
+    outline-color: #05386B;
+    background-color: #1D2731;
+    margin-left: 14rem;
+    width: 18rem;
+}
+
+.nav-search2{
+    outline-color: #38526b;
+    background-color: #191a19;
+    margin-left: 14rem;
+    width: 18rem;
+}
+
+.txt{
+    color: #05386B;
+    background-color: #5cdb95;
+  }
+  
+  .txt1{
+    color: #D9B310;
+    background-color: #1D2731;
+  }
+
+  .txt2{
+    color: white;
+    background-color: black;
+  }
+
+
+.logo{
+    color: #05386B;
+    font-family: samarkan;
+    font-size: 2rem;
+}
+
+.logo1{
+    color: #D9B310;
+    font-family: samarkan;
+    font-size: 2rem;
+}
+
+.logo2{
+    color: white;
+    font-family: samarkan;
+    font-size: 2rem;
+}
+
+.body{
+    background-color: #5cdb95;
+}
+
+.body1{
+    background-color: #1D2731;
+}
+
+.body2{
+    background-color: black;
+}
