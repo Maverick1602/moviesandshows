@@ -1,3 +1,17 @@
+
+#Overview
+
+A personal project to fetch movie database and visualize it in a dynamic design with multiple themes.
+Features - Show popular shows, top rated shows and movies, get their details, get cast details and get similar content/recommendations.
+
+
+
+
+
+
+
+
+
 # MyApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.25.
