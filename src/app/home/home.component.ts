@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserserviceService } from '../userservice.service';
+import { Router,RouterModule,ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,12 +9,13 @@ import { UserserviceService } from '../userservice.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private userv: UserserviceService) { }
+  constructor(private userv: UserserviceService, private route: Router) { }
 
   theme: string;
-  data: any;
+  data: any = [];
   error: any;
-
+  searchval: any;
+  
   ngOnInit() {
     this.userv.fetchDb().subscribe(
       (success)=>{
@@ -27,12 +29,27 @@ export class HomeComponent implements OnInit {
     )
 
 
-    this.userv.changeT.subscribe((val)=>{this.theme = val})
+    this.userv.changeT.subscribe((val)=>{this.theme = val});
+    this.userv.media.next("tv")
 
+  }
+
+  searchMovie(){
+    this.route.navigateByUrl("search/"+this.searchval+"/false")
+    console.log("clicked")
+  }
+
+  searchAd(){
+    this.route.navigateByUrl("search/"+this.searchval+"/true")
   }
 
   ngDoCheck(){
     // this.theme = localStorage.getItem("theme")
+  }
+
+  fetchObj(objVal){
+    console.log("click",objVal);
+    this.route.navigate(["details"],{queryParams: objVal})
   }
 
 }

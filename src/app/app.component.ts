@@ -20,7 +20,7 @@ export class AppComponent {
   
   ngOnInit(){
     // this.registerForm = this.fb.group({
-    //   "uName": ["Parth",[Validators.required, Validators.pattern(/^[A-z]{3,6}$/)]],
+    //   "uName": ["P",[Validators.required, Validators.pattern(/^[A-z]{3,6}$/)]],
     //   "emailId" : ["",[Validators.required,ValidateEmail]],
     //   "phoneNo" : ["",[Validators.required,Validators.min(6000000000),Validators.max(9999999999)]],
     //   "address" : ["",[Validators.required]]
@@ -155,7 +155,7 @@ export class AppComponent {
 // function ValidateEmail(input : FormControl){
 //   console.log(input.value)
 //   let inputVal = input.value
-//     return inputVal.match(/^[A-z]+@infy\.com$/)?null : {
-//       "emailIdError":{"message" : "Enter an infosys Email Id"}
+//     return inputVal.match(/^[A-z]+@gmail\.com$/)?null : {
+//       "emailIdError":{"message" : "Enter a valid Email Id"}
 //     } 
 // }

@@ -13,7 +13,12 @@ import { GuardService } from './GuardService';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TopmoviesComponent } from './topmovies/topmovies.component';
 import { TopshowsComponent } from './topshows/topshows.component';
-import { HomeComponent } from './home/home.component'
+import { HomeComponent } from './home/home.component';
+import { SearchComponent } from './search/search.component';
+import { DetailsComponent } from './details/details.component';
+import { CastdetailsComponent } from './castdetails/castdetails.component';
+// import {NgParticlesModule} from "ng-particles";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +27,10 @@ import { HomeComponent } from './home/home.component'
     RegisterComponent,
     TopmoviesComponent,
     TopshowsComponent,
-    HomeComponent
+    HomeComponent,
+    SearchComponent,
+    DetailsComponent,
+    CastdetailsComponent
   ],
   imports: [
     BrowserModule,

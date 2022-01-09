@@ -1,8 +1,9 @@
 <body [ngClass]="theme == 'first'? 'body' : theme == 'second' ? 'body1' : 'body2' ">
+    <br>
     <h3 [ngClass]="theme == 'first'? 'txt' : theme == 'second' ? 'txt1' : 'txt2' ">Top Rated Movies</h3>
     <div class="flex-container" [ngClass]="theme == 'first'? 'body' : theme == 'second' ? 'body1' : 'body2' ">
         <div *ngFor="let i of data.results">
-            <div [ngClass]="theme == 'first'? 'card' : theme == 'second' ? 'card1' : 'card2' ">
+            <div [ngClass]="theme == 'first'? 'card' : theme == 'second' ? 'card1' : 'card2' " (click)="fetchObj(i)">
                 <img src="https://image.tmdb.org/t/p/original/{{i.poster_path}}" alt="Avatar" style="width:100%">
                     <div class="container">
                         <h5><b>{{i.title}}</b></h5>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserserviceService } from '../userservice.service';
-import { ActivatedRoute } from '@angular/router'
+import { ActivatedRoute, Router } from '@angular/router'
 
 @Component({
   selector: 'app-topmovies',
@@ -9,10 +9,10 @@ import { ActivatedRoute } from '@angular/router'
 })
 export class TopmoviesComponent implements OnInit {
 
-  constructor(private userv: UserserviceService, private route: ActivatedRoute) { }
+  constructor(private userv: UserserviceService, private route: ActivatedRoute, private router: Router) { }
 
   theme: string;
-  data: any;
+  data: any=[];
   error: any;
 
   ngOnInit() {
@@ -27,7 +27,8 @@ export class TopmoviesComponent implements OnInit {
       }
     )
     
-    this.userv.changeT.subscribe((val)=>{this.theme = val})
+    this.userv.changeT.subscribe((val)=>{this.theme = val});
+    this.userv.media.next("movie")
     
 
   }
@@ -35,6 +36,11 @@ export class TopmoviesComponent implements OnInit {
   ngDoCheck(){
     // this.theme = localStorage.getItem("theme")
     // this.userv.changeT.subscribe((val)=>{this.theme = val})
+  }
+
+  fetchObj(objVal){
+    console.log("click",objVal);
+    this.router.navigate(["details"],{queryParams: objVal})
   }
   
 

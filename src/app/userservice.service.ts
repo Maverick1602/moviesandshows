@@ -18,6 +18,7 @@ export class UserserviceService {
   }
 
   public changeT = new BehaviorSubject<any>("dark")
+  public media = new BehaviorSubject<any>("tv")
 
 
   key: string = "9c0e0e8844589d931df3be595ce4ffb1"
@@ -31,6 +32,34 @@ export class UserserviceService {
   }
 
   fetchDb() : Observable<any> {
-    return this.http.get("https://api.themoviedb.org/3/tv/popular?api_key=9c0e0e8844589d931df3be595ce4ffb1&language=en-US&page=1")
+    return this.http.get("https://api.themoviedb.org/3/tv/popular?api_key="+this.key+"&language=en-US&page=1")
+  }
+
+  search(val) : Observable<any> {
+    return this.http.get("https://api.themoviedb.org/4/search/movie?api_key="+this.key+"&language=en-US&query="+val+"&page=1&include_adult=false")
+  }
+
+  searchAd(val) : Observable<any> {
+    return this.http.get("https://api.themoviedb.org/4/search/movie?api_key="+this.key+"&language=en-US&query="+val+"&page=1&include_adult=true")
+  }
+
+  getSimilarMovies(id) :Observable<any>{
+    return this.http.get("https://api.themoviedb.org/3/movie/"+id+"/similar?api_key="+this.key+"&language=en-US&page=1")
+  }
+
+  getSimilarShows(id) :Observable<any>{
+    return this.http.get("https://api.themoviedb.org/3/tv/"+id+"/similar?api_key="+this.key+"&language=en-US&page=1")
+  }
+
+  getMovieCast(id) :Observable<any>{
+    return this.http.get("https://api.themoviedb.org/3/movie/"+id+"/credits?api_key="+this.key+"&language=en-US")
+  }
+
+  getTvCast(id) :Observable<any>{
+    return this.http.get("https://api.themoviedb.org/3/tv/"+id+"/credits?api_key="+this.key+"&language=en-US")
+  }
+
+  getCastDetails(id) :Observable<any>{
+    return this.http.get("https://api.themoviedb.org/3/person/"+id+"?api_key="+this.key+"&language=en-US")
   }
 }

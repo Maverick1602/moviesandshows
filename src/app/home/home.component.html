@@ -1,9 +1,26 @@
 <body [ngClass]="theme == 'first'? 'body' : theme == 'second' ? 'body1' : 'body2' ">
+    <br>
+    <br>
+    <div class="col-md-5 offset-4">
+        <div class="input-group">
+            <input type="text" [(ngModel)]="searchval" id="search"  class="form-control">
+            <span class="input-group-btn">
+                 <button class="btn btn-default"  (click)="searchMovie()"  [ngClass]="theme == 'first'? 'but' : theme == 'second' ? 'but1' : 'but2' " type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                      </svg>
+                 </button>
+            </span>
+            
+        </div>
+        <span (dblclick)="searchAd()" style="background: transparent;">&nbsp;</span>
+    </div>
+    
     <h3 [ngClass]="theme == 'first'? 'txt' : theme == 'second' ? 'txt1' : 'txt2' ">Popular shows</h3>
     <div class="flex-container" [ngClass]="theme == 'first'? 'body' : theme == 'second' ? 'body1' : 'body2' ">
         <div *ngFor="let i of data.results">
-            <div [ngClass]="theme == 'first'? 'card' : theme == 'second' ? 'card1' : 'card2' ">
-                <img src="https://image.tmdb.org/t/p/original/{{i.poster_path}}" alt="Avatar" style="width:100%">
+            <div [ngClass]="theme == 'first'? 'card' : theme == 'second' ? 'card1' : 'card2' " (click)="fetchObj(i)">
+                <img src="https://image.tmdb.org/t/p/original/{{i.poster_path}}" alt="{{i.name}}" style="width:100%">
                     <div class="container">
                         <h5><b>{{i.name}}</b></h5>
                         <small><b>Rating: {{i.vote_average}}</b></small>

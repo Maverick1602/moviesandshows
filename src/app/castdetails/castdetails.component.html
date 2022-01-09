@@ -1,0 +1,21 @@
+<body [ngClass]="theme == 'first'? 'body' : theme == 'second' ? 'body1' : 'body2' ">
+    <br>
+    <h3 [ngClass]="theme == 'first'? 'txt' : theme == 'second' ? 'txt1' : 'txt2' "></h3>
+    <div class="flex-container">
+        
+        <div class="flex-item-left">
+            <img src="https://image.tmdb.org/t/p/original{{data.profile_path}}" alt="{{data.name}}'s pic">
+        </div>
+        <div class="flex-item-right">
+            <div [ngClass]="theme == 'first'? 'txt' : theme == 'second' ? 'txt1' : 'txt2' ">
+                <h4>{{data.name}}</h4>
+                <br>
+                <h6>
+                    {{data.biography}}
+                </h6>
+                
+                
+            </div>
+        </div>
+    </div>
+</body>

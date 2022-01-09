@@ -1,13 +1,9 @@
 <body [ngClass]="theme == 'first'? 'body' : theme == 'second' ? 'body1' : 'body2' ">
-  <nav class="navbar navbar-expand-lg navbar-transparent">
+  <nav class="navbar navbar-expand-lg" [ngClass]="theme == 'first'? 'nav1' : theme == 'second' ? 'nav2' : 'nav3' ">
     <a class="navbar-brand" [ngClass]="theme == 'first'? 'logo' : theme == 'second' ? 'logo1' : 'logo2' " href="#">Chalchitra</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <!-- <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" [ngClass]="theme == 'first'? 'nav-search' : theme == 'second' ? 'nav-search1' : 'nav-search2' " type="search" aria-label="Search">
-      <button class="btn my-2 my-sm-0 " [ngClass]="theme == 'first'? 'nav-btn' : theme == 'second' ? 'nav-btn1' : 'nav-btn2' " type="submit">Search</button>
-    </form> -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
@@ -15,9 +11,6 @@
         </li>
         <li class="nav-item active">
           <a [ngClass]="theme == 'first'? 'nav-link' : theme == 'second' ? 'nav-link1' : 'nav-link2' " (click)="goToShows()">Top Rated Shows</a>
-        </li>
-        <li class="nav-item">
-          <a [ngClass]="theme == 'first'? 'nav-link' : theme == 'second' ? 'nav-link1' : 'nav-link2' " href="#"></a>
         </li>
       </ul>
       <select id="themeDropdown"  [ngClass]="theme == 'first'? 'txt' : theme == 'second' ? 'txt1' : 'txt2' " (click)="changeTheme($event.target.value)" class="btn ">
@@ -29,7 +22,11 @@
     
     </div>
   </nav>
-  <br>
-  <router-outlet></router-outlet>
+  <div>
+    <router-outlet></router-outlet>
+   </div>
+  
+ 
+  
   
 </body>

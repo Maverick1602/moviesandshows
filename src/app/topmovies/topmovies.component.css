@@ -1,82 +1,5 @@
-.flex-container {
-  display: flex;
-  flex-flow: row wrap;
-}
 
-.body{
-    background-color: #5cdb95;
-}
 
-.body1{
-    background-color: #1D2731;
-}
-
-.body2{
-    background-color: black;
-}
-
-.txt{
-  color: #05386B;
-  margin-left: 4rem;
-}
-
-.txt1{
-  color: #D9B310;
-  margin-left: 4rem;
-}
-
-.txt2{
-  color: white;
-  margin-left: 4rem;
-}
-
-.card {
-    /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 2px rgba(0,0,0,0.2);
-    transition: 0.3s;
-    width: 16rem;
-    height: 26rem;
-    margin: 2.4rem;
-    background: transparent;
-    color: #05386B;
-  }
-
-  .card1 {
-    /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 2px rgba(0,0,0,0.2);
-    transition: 0.3s;
-    width: 16rem;
-    height: 26rem;
-    margin: 2.4rem;
-    background: transparent;
-    color: #D9B310;
-  }
-
-  .card2 {
-    /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 2px rgba(49, 49, 49, 0.2);
-    transition: 0.3s;
-    width: 16rem;
-    height: 26rem;
-    margin: 2.4rem;
-    background: transparent;
-    color: white;
-  }
-
-/* On mouse-over, add a deeper shadow */
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(14, 1, 1, 0.2);
-}
-
-/* On mouse-over, add a deeper shadow */
-.card1:hover {
-  box-shadow: 0 8px 16px 0 rgba(14, 1, 1, 0.2);
-}
-
-/* On mouse-over, add a deeper shadow */
-.card2:hover {
-  box-shadow: 0 8px 16px 0 rgba(170, 169, 169, 0.2);
-}
 
   img{
       width: 16rem;
@@ -92,9 +15,4 @@
 
 
 /* Responsive layout - makes a one column layout instead of a two-column layout */
-@media (max-width: 800px) {
-  .flex-container {
-    flex-direction: column;
-  }
-}
 

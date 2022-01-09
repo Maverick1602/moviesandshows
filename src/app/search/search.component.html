@@ -1,0 +1,24 @@
+<body [ngClass]="theme == 'first'? 'body' : theme == 'second' ? 'body1' : 'body2' ">
+    <br>
+    <!-- <h3 [ngClass]="theme == 'first'? 'txt' : theme == 'second' ? 'txt1' : 'txt2' ">Top Rated Movies</h3> -->
+    <div class="flex-container" [ngClass]="theme == 'first'? 'body' : theme == 'second' ? 'body1' : 'body2' ">
+        <div *ngFor="let i of data.results">
+            <div [ngClass]="theme == 'first'? 'card' : theme == 'second' ? 'card1' : 'card2' " (click)="fetchObj(i)">
+                <img src="https://image.tmdb.org/t/p/original/{{i.poster_path}}" alt="{{i.name}}{{i.title}}'s poster" style="width:100%">
+                    <div class="container">
+                        <h5><b>{{i.title}}{{i.name}}</b></h5>
+                        <small><b>Rating: {{i.vote_average}}</b></small>
+                    </div>
+            </div>
+        </div>
+        <div *ngFor="let i of data.cast">
+            <div [ngClass]="theme == 'first'? 'card' : theme == 'second' ? 'card1' : 'card2' "  [routerLink]="['/castdetails', i.id ]">
+                <img src="https://image.tmdb.org/t/p/original/{{i.profile_path}}" alt="{{i.name}}'s picture" style="width:100%">
+                    <div class="container">
+                        <h5><b>{{i.name}}</b></h5>
+                        <small><b>Character : {{i.character}}</b></small>
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>

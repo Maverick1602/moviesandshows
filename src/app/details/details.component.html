@@ -1,0 +1,25 @@
+<body [ngClass]="theme == 'first'? 'body' : theme == 'second' ? 'body1' : 'body2' ">
+    <br>
+    <h3 [ngClass]="theme == 'first'? 'txt' : theme == 'second' ? 'txt1' : 'txt2' ">{{data.name}}{{data.title}}</h3>
+    <div class="flex-container">
+        
+        <div class="flex-item-left">
+            <img src="https://image.tmdb.org/t/p/original/{{data.poster_path}}" alt="{{data.name}}">
+        </div>
+        <div class="flex-item-right">
+            <div [ngClass]="theme == 'first'? 'txt' : theme == 'second' ? 'txt1' : 'txt2' ">
+                <h4>Overview</h4>
+                <br>
+                <h5>
+                    {{data.overview}}
+                </h5>
+                <br>
+                <h6>Rating : {{data.vote_average}}</h6>
+                <h6 *ngIf="media == 'tv' ">Country of origin : {{data.origin_country}}</h6>
+                <h6>Release date : {{data.first_air_date}}{{data.release_date}}</h6>
+                <h6><a [routerLink]="['/showsimilar']" [queryParams]="data">Show similar content</a></h6>
+                <h6><a [routerLink]="['/showcast', data.id ]">Show cast</a></h6>
+            </div>
+        </div>
+    </div>
+</body>

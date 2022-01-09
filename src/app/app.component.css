@@ -1,9 +1,18 @@
-.navbar-transparent{
+.nav1{
+    background:  #05386B;
+}
+
+.nav2{
+    background:  transparent;
+}
+
+.nav3{
     background:  transparent;
 }
 
 .nav-link{
-    color: #05386B;
+    /* color: #05386B; */
+    color: white;
     margin-left: 1rem;
 }
 
@@ -19,6 +28,7 @@
 .nav-link:hover{
     color: white;
     cursor: pointer;
+    text-decoration: underline;
 }
 
 .nav-link1:hover{
@@ -31,9 +41,8 @@
     cursor: pointer;
 }
 
-.nav-btn{
+/* .nav-btn{
     background-color: #05386B;
-    color: #5CDB95;
 }
 
 .nav-btn1{
@@ -47,8 +56,7 @@
 }
 
 .nav-search{
-    outline-color: #05386B;
-    background-color: #8EE4AF;
+    background-color: #05386B;
     margin-left: 14rem;
     width: 18rem;
 }
@@ -65,11 +73,13 @@
     background-color: #191a19;
     margin-left: 14rem;
     width: 18rem;
-}
+} */
 
 .txt{
-    color: #05386B;
-    background-color: #5cdb95;
+    background-color: #05386B;
+    color: white;
+    /* background-color: #5cdb95; */
+    /* background-color: yellow; */
   }
   
   .txt1{
@@ -84,7 +94,8 @@
 
 
 .logo{
-    color: #05386B;
+    /* color: #05386B; */
+    color: white;
     font-family: samarkan;
     font-size: 2rem;
 }
@@ -101,7 +112,7 @@
     font-size: 2rem;
 }
 
-.body{
+/* .body{
     background-color: #5cdb95;
 }
 
@@ -111,4 +122,4 @@
 
 .body2{
     background-color: black;
-}
+} */

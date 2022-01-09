@@ -1,0 +1,19 @@
+img{
+    width: 24rem;
+    height: 30rem;
+    margin-left: 4rem;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.flex-item-left {
+    flex: 35%;
+}
+  
+.flex-item-right {
+    flex: 65%;
+}
