@@ -1,7 +1,7 @@
 
-#Overview
+# Overview
 
-A personal project to fetch movie database and visualize it in a dynamic design with multiple themes.
+A personal project named "Chalchitra" to fetch movie database (tmdb) and visualize it in a dynamic design with multiple themes.
 Features - Show popular shows, top rated shows and movies, get their details, get cast details and get similar content/recommendations.
 
 
