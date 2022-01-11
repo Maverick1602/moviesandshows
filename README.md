@@ -4,6 +4,9 @@
 A personal project named "Chalchitra" to fetch movie database (tmdb) and visualize it in a dynamic design with multiple themes.
 Features - Show popular shows, top rated shows and movies, get their details, get cast details and get similar content/recommendations.
 
+#Hosted on firebase
+https://myport1602.web.app/
+
 
 
 
