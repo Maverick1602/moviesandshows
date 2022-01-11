@@ -1,3 +1,20 @@
+
+# Overview
+
+A personal project named "Chalchitra" to fetch movie database (tmdb) and visualize it in a dynamic design with multiple themes.
+Features - Show popular shows, top rated shows and movies, get their details, get cast details and get similar content/recommendations.
+
+# Hosted on firebase
+https://myport1602.web.app/
+
+
+
+
+
+
+
+
+
 # MyApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.25.
